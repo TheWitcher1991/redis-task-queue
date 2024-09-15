@@ -1,4 +1,4 @@
-#inline "broker.h"
+#include "broker.h"
 #include <iostream>
 
 RedisClient::RedisClient(const std::string& host, int port) {

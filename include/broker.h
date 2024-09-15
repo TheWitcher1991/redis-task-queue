@@ -1,7 +1,7 @@
 #ifndef REDIS_CLIENT_H
 #define REDIS_CLIENT_H
 
-##include <string>
+#include <string>
 #include <hiredis/hiredis.h>
 
 class RedisClient {
