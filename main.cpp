@@ -1,5 +1,4 @@
-#include <iostream>
-#include <chrono>
+#include "config.h"
 
 int main() {
      return 0;
