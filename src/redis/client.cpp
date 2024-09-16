@@ -1,8 +1,8 @@
 #include "include/redis/client.h"
 #include <iostream>
 
-RedisClient::RedisClient(const std::string& host, int port) {
-    context = redisConnect(host.c_str(), port);
+RedisClient::RedisClient(const std::string& host, int port, const std::string& password, int db) {
+    context = redisConnect(host.c_str(), port, password.c_str(), db);
     if (context == nullptr || context->err) {
         std::cerr << "Error: " << context->errstr << std::endl;
         redisFree(context);

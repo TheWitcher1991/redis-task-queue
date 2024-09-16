@@ -9,7 +9,7 @@ private:
     redisContext *context;
 
 public:
-    RedisClient(const std::string &host, int port);
+    RedisClient(const std::string &host, int port, const std::string &password, int db);
     ~RedisClient();
 
     void publish(const std::string &channel, const std::string &message);
