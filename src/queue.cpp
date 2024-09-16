@@ -18,6 +18,7 @@ void Queue::shutdown() {
 void Queue::pop() {
     std::lock_guard<std::mutex> lock(mutex);
     cv.wait(lock, [this]() { return !tasks.empty() || is_shutdown; }
+    
     if (tasks.empty()) {
         return nullptr;
     }

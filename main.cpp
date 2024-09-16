@@ -1,5 +1,10 @@
 #include "config.h"
+#include "include/redis/client.h"
 
 int main() {
-     return 0;
+    config Config();
+
+    redis RedisClient(config::redisHost, config::redisPort, config::redisPassword, config::redisDB);
+
+    return 0;
 }
